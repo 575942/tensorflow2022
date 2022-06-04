@@ -29,7 +29,21 @@ model.compile(optimizer="adam",
                 loss='sparse_categorical_crossentropy',
                 metrics=["accuracy"]
                 )
+<<<<<<< HEAD
 model.fit(x=train_imges,y=train_labels,epochs=500)
+=======
+model.fit(x=train_imges,y=train_labels,epochs=10)
+#数据归一化
+train_imges=train_imges/255
+
+#model.summary()  #查看模型
+#定义优化器和损失函数
+model.compile(optimizer="adam",
+                loss='sparse_categorical_crossentropy',
+                metrics=["accuracy"]
+                )
+model.fit(x=train_imges,y=train_labels,epochs=10)
+>>>>>>> 24bddcf3b6a0320c0ffb42a5c6bebbb697aff63c
 
 #模型测试
 test_imges_sd=test_imges/255  #数据归一化
